@@ -1,0 +1,6 @@
+*.pyc
+.ipynb_checkpoints
+test.ipynb
+feature/
+data/
+checkpoints/
