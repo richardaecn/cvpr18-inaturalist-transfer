@@ -25,8 +25,7 @@ Notice that we used a mini validation set (./inat_minival.txt) contains 9,697 im
 git clone --recursive https://github.com/richardaecn/cvpr18-inaturalist-transfer.git
 ```
 + Install dependencies. Please refer to TensorFlow, pyemd, scikit-learn and scikit-image official websites for installation guide.
-+ Download data from [this link](https://drive.google.com/file/d/1-FJlSj0Qa8pYvp_5PbMKw4piu7Qt5qfE/).
-+ Download feature from [this link](https://drive.google.com/file/d/1vOHKuqt7XgROo9t5cblJvGf0kGpiFaF1/).
++ Download [data](https://drive.google.com/file/d/1-FJlSj0Qa8pYvp_5PbMKw4piu7Qt5qfE/) and [feature](https://drive.google.com/file/d/1vOHKuqt7XgROo9t5cblJvGf0kGpiFaF1/) and unzip them into the same directory as the cloned repo. You should have two folders './data' and './feature' in the repo's directory.
 
 
 ## Datasets (optional):
@@ -75,7 +74,7 @@ Run the following Python script to extract feature:
 ```
 python feature_extraction.py
 ```
-The dataset and pre-trained model can be modified in the script.
+To run this script, you need to download the checkpoint of [Inception-V3 299 trained on iNat2017](https://drive.google.com/open?id=1g3bsmBrKPRbah4EDNnC_IgDk8N4uAZaY). The dataset and pre-trained model can be modified in the script.
 
 We provide [a download link](https://drive.google.com/file/d/1vOHKuqt7XgROo9t5cblJvGf0kGpiFaF1/) that includes features used in the domos of this repo.
 
