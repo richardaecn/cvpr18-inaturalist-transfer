@@ -1,6 +1,7 @@
 *.pyc
 .ipynb_checkpoints
 test.ipynb
+run.sh
 feature/
 data/
 checkpoints/

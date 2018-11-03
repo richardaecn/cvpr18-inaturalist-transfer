@@ -20,7 +20,7 @@ Notice that we used a mini validation set (./inat_minival.txt) contains 9,697 im
 
 
 ## Preparation:
-+ Clone the repo with recursive
++ Clone the repo with recursive:
 ```bash
 git clone --recursive https://github.com/richardaecn/cvpr18-inaturalist-transfer.git
 ```
@@ -91,6 +91,25 @@ LinearClassifierDemo.ipynb
 This demo gives an example to calculate the domain similarity proposed in the paper. Results correspond to part of the Fig. 5 in the original paper.
 ```
 DomainSimilarityDemo.ipynb
+```
+
+
+## Training and Evaluation
++ Convert dataset into '.tfrecord':
+```
+python convert_dataset.py --dataset_name=cub_200 --num_shards=10
+```
++ Train (fine-tune) the model on 1 GPU:
+```
+CUDA_VISIBLE_DEVICES=0 ./train.sh
+```
++ Evaluate the model on another GPU simultaneously:
+```
+CUDA_VISIBLE_DEVICES=1 ./eval.sh
+```
++ Run Tensorboard for visualization:
+```
+tensorboard --logdir=./checkpoints/cub_200/ --port=6006
 ```
 
 
